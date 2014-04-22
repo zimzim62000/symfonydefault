@@ -1,0 +1,3 @@
+centaure_bundles_user_homepage:
+    pattern:  /
+    defaults: { _controller: CentaureBundlesUserBundle:Default:index }

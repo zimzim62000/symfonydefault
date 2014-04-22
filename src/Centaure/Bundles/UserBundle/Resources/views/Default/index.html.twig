@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'views.user.default.index.title'|trans }}{% endblock %}
+
+{% block menu %}
+    <dl class="sub-nav">
+        <dt>{{ 'views.user.default.index.join'|trans }}</dt>
+        <dd >
+            <a href="{{ path('fos_user_registration_register') }}">{{ 'views.user.default.index.register'|trans }}</a>
+        </dd>
+        <dd>
+            <a href="{{ path('fos_user_security_login') }}">{{ 'views.user.default.index.login'|trans }}</a>
+        </dd>
+        <dd>
+            <a href="{{ path('hwi_oauth_connect') }}">{{ 'views.user.default.index.tiers'|trans }}</a>
+        </dd>
+    </dl>
+{% endblock menu %}

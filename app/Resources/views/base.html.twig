@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <META HTTP-EQUIV="Content-Language" content="fr">
+        <META NAME="language" content="French">
+        <META NAME="identifier-url" CONTENT="http://www.default.com">
+        <META NAME="robots" CONTENT="index,follow">
+        <META NAME="keywords" CONTENT="default">
+        <META NAME="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        {% block headshare %}
+        {% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            {% if app.environment == 'prod' %}
+                <link rel="stylesheet" href="{{ asset('built/css/min.css') }}"" />
+            {% else %}
+                {% stylesheets 'app/css/css.css' 'app/css/app.css' filter='cssrewrite' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+                {% endstylesheets %}
+            {% endif %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block body %}
+        {% block container %}
+            {% block menu %}
+            {% endblock menu %}
+        {% endblock container %}
+        {% block footer %}
+        {% endblock footer %}
+    {% endblock body %}
+    {% block javascripts %}
+        {% if app.environment == 'prod' %}
+            <script type="text/javascript" src="{{ asset('built/js/min.js') }}"></script>
+        {% else %}
+            {% javascripts 'app/js/jquery.min.js' 'app/js/hammer.jquery.js'  'app/js/modernizr.js' 'app/js/app.js' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endif %}
+    {% endblock %}
+    </body>
+</html>
