@@ -12,8 +12,10 @@ PHP5.4, NPM, RVM
 
 ####How to: 
 
-gem install compass
+* gem install compass
 
-npm install
+* npm install
 
-bower install
+* bower install
+
+* grunt
