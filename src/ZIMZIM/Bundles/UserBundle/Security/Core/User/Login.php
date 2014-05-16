@@ -1,5 +1,5 @@
 <?php
-namespace Centaure\Bundles\UserBundle\Security\Core\User;
+namespace ZIMZIM\Bundles\UserBundle\Security\Core\User;
 
 
 use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;

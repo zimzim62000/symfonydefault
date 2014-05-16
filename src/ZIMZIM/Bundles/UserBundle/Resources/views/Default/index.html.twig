@@ -2,10 +2,10 @@
 
 {% block title %}{{ 'views.user.default.index.title'|trans }}{% endblock %}
 
-{% block menu %}
+{% block page %}
     <dl class="sub-nav">
         <dt>{{ 'views.user.default.index.join'|trans }}</dt>
-        <dd >
+        <dd>
             <a href="{{ path('fos_user_registration_register') }}">{{ 'views.user.default.index.register'|trans }}</a>
         </dd>
         <dd>
@@ -15,4 +15,9 @@
             <a href="{{ path('hwi_oauth_connect') }}">{{ 'views.user.default.index.tiers'|trans }}</a>
         </dd>
     </dl>
-{% endblock menu %}
+    <div class="row">
+        <div class="small-12 large-12 columns text-center bgwhite section">
+            {% include '::Animate/Circle.html.twig' %}
+        </div>
+    </div>
+{% endblock page %}

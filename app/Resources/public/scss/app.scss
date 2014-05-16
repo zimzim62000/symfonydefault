@@ -1,0 +1,63 @@
+@import "settings";
+@import "foundation";
+
+.bgblue{
+  background: $blue;
+}
+.bgaqua{
+  background: $aqua;
+}
+.bgwhite{
+    background: $white;
+}
+
+$widthcircle: 50px;
+$heightcircle: 50px;
+$borderwidth: 6px;
+$delaianim: 2s;
+
+div.section{
+    height: 400px;
+    line-height: 400px;
+    position: relative;
+}
+
+span.circle{
+    height: $widthcircle;
+    width:  $heightcircle;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+span.circle-zim {
+    content: '';
+    position: relative;
+    top: -$borderwidth; left: -$borderwidth; right: -$borderwidth; bottom: -$borderwidth;
+    border-radius: $widthcircle;
+    border: $borderwidth SOLID transparent;
+    border-top-color: $aqua;
+    border-bottom-color: $aqua;
+    animation :spinzim $delaianim linear infinite;
+}
+
+span.circle-zim:after{
+    content: '';
+    position: absolute;
+    top: $borderwidth; left: $borderwidth; right: $borderwidth; bottom: $borderwidth;
+    border-radius: $widthcircle;
+    border: $borderwidth/2 SOLID transparent;
+    border-top-color: $blue;
+    border-bottom-color: $blue;
+    animation : spinreversezim $delaianim*1.5 linear infinite;
+}
+
+@keyframes spinzim{
+    0%{ @include rotate(0deg)}
+    100%{ @include rotate(360deg)}
+}
+
+@keyframes spinreversezim{
+    0%{ @include rotate(0deg)}
+    100%{ @include rotate(-360deg)}
+}
