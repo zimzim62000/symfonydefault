@@ -23,7 +23,11 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
-            new Centaure\Bundles\UserBundle\CentaureBundlesUserBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new APY\DataGridBundle\APYDataGridBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+
+            new ZIMZIM\Bundles\UserBundle\ZIMZIMBundlesUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -24,7 +24,11 @@
         "friendsofsymfony/user-bundle": "2.0.*@dev",
         "friendsofsymfony/rest-bundle": "1.4.*@dev",
         "hwi/oauth-bundle": "0.4.*@dev",
-        "jms/serializer-bundle": "0.13.*@dev"
+        "jms/serializer-bundle": "0.13.*@dev",
+        "stof/doctrine-extensions-bundle": "1.1.*@dev",
+        "apy/datagrid-bundle": "dev-master",
+        "white-october/pagerfanta-bundle": "1.0.*@dev",
+        "jasny/twig-extensions": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -54,5 +58,11 @@
         "branch-alias": {
             "dev-master": "2.4-dev"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/acseo/APYDataGridBundle.git"
+        }
+    ]
 }

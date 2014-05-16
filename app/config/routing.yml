@@ -38,6 +38,6 @@ facebook_login:
 twitter_login:
     pattern: /user/login/check-twitter
 
-centaure_bundles_user:
-    resource: "@CentaureBundlesUserBundle/Resources/config/routing.yml"
+zimzim_bundles_user:
+    resource: "@ZIMZIMBundlesUserBundle/Resources/config/routing.yml"
     prefix:   /
