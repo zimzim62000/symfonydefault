@@ -16,13 +16,14 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Centaure\Bundles\UserBundle\CentaureBundlesUserBundle(),
 
             new \FOS\RestBundle\FOSRestBundle(),
             new \JMS\SerializerBundle\JMSSerializerBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new HWI\Bundle\OAuthBundle\HWIOAuthBundle()
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+
+            new Centaure\Bundles\UserBundle\CentaureBundlesUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
