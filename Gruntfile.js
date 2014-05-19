@@ -6,6 +6,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     grunt.initConfig({
 
@@ -19,6 +20,13 @@ module.exports = function(grunt){
                         'web/app/js/app.js'
                     ]
                 }
+            }
+        },
+
+        autoprefixer: {
+            single_file: {
+                src: 'app/Resources/public/css/app.css',
+                dest: 'app/Resources/public/css/app.css'
             }
         },
 
@@ -82,8 +90,8 @@ module.exports = function(grunt){
 
     });
 
-    grunt.registerTask('default', ['compass', 'copy', 'jshint', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['compass', 'autoprefixer', 'copy', 'jshint', 'uglify', 'cssmin']);
     grunt.registerTask('js', ['copy:js', 'jshint', 'uglify']);
-    grunt.registerTask('css', ['compass', 'copy:css', 'cssmin']);
+    grunt.registerTask('css', ['compass', 'autoprefixer', 'copy:css', 'cssmin']);
 
 };
