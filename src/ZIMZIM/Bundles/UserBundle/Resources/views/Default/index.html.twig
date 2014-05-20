@@ -43,15 +43,14 @@
                 var animation = _self.element.find('span:first');
                 var background = 'background-image:' + animation.css('background-image');
                 background = background.replace('"', '\'').replace('"', '\'');
-                console.log(background);
                 var elementGauche = _self.element.append('<span style="' + _self.styleLeft + ' ' + background + ';width: ' + _self.width / 2 + 'px; height: ' + _self.height + 'px; animation: zimzim-bounce linear 10s infinite;"></span>');
-                //animation.hide();
+                var elementDroit = _self.element.append('<span style="' + _self.styleRight + ' ' + background + '; background-position: '+ _self.width / 2 +'px; width: ' + _self.width / 2 + 'px; height: ' + _self.height + 'px; animation: zimzim-bounce linear 10s infinite;"></span>');
+
+                animation.hide();
             }
         }
 
         var Anim = new Animation($('#toto1'));
         Anim.rebuildElement();
-        console.log(Anim);
-
     </script>
 {% endblock javascripts %}
