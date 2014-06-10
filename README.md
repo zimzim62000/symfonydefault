@@ -1,4 +1,14 @@
-Centaure systems
-==============
+zimzim62000 project default
+=========
 
-BET on FIFA WORLD CUP
+require:
+PHP5, RVM , RPM
+
+rpm install -g bower
+rpm install -g grunt-cli
+
+gem install compass
+rpm install
+rvm install
+
+grunt
