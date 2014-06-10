@@ -1,21 +1,4 @@
-Zimzim project step one
-=======================
+Centaure systems
+==============
 
-#####My default project symfony 2 prebuilt
-
-
-####Prérequis : 
-
-PHP5.4, NPM, RVM
-
-
-
-####How to: 
-
-* gem install compass
-
-* npm install
-
-* bower install
-
-* grunt
+BET on FIFA WORLD CUP
