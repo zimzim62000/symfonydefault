@@ -17,7 +17,10 @@ module.exports = function(grunt){
                         'web/app/js/jquery.min.js',
                         'web/app/js/hammer.jquery.js',
                         'web/app/js/modernizr.js',
-                        'web/app/js/app.js'
+                        'web/app/js/app.js',
+                        'web/app/js/foundation.min.js',
+                        'web/app/js/foundation.topbar.js',
+                        'web/app/js/ga.js'
                     ]
                 }
             }
@@ -39,7 +42,7 @@ module.exports = function(grunt){
         },
 
         jshint: {
-            all: ['app/Resources/public/js/*.js']
+            all: ['app/Resources/public/js/app.js']
         },
 
         copy: {
@@ -50,6 +53,8 @@ module.exports = function(grunt){
                     {src: 'bower_components/jquery/dist/jquery.min.js', dest: 'web/app/js/jquery.min.js'},
                     {src: 'bower_components/hammerjs/hammer.js', dest: 'web/app/js/hammer.jquery.js'},
                     {src: 'bower_components/modernizr/modernizr.js', dest: 'web/app/js/modernizr.js'},
+                    {src: 'bower_components/foundation/js/foundation.min.js', dest: 'web/app/js/foundation.min.js'},
+                    {src: 'bower_components/foundation/js/foundation/foundation.topbar.js', dest: 'web/app/js/foundation.topbar.js'},
                 ]
             },
 
