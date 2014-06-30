@@ -12,3 +12,9 @@ rpm install
 rvm install
 
 grunt
+
+
+OLD REPOSITORY
+===========
+
+New => https://github.com/zimzim62000/symfony
